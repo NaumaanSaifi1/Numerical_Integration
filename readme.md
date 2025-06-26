@@ -1,84 +1,103 @@
-<h1 align="center" style="font-size: 2.8em; color:#e67e22; font-family: 'Segoe UI', sans-serif;">
-  🔢 Numerical Integration (C Language)
-</h1>
-
-<p align="center" style="font-size: 1.2em; color: #555;">
-  A clean and precise implementation of numerical integration methods using the C programming language.<br/>
-  Ideal for academic purposes, engineering applications, and scientific computing.
+<h1 align="center" style="font-size:2.8em; color:#e67e22;">🔢 Numerical Integration Methods in C</h1>
+<p align="center">
+  <img src="https://img.shields.io/badge/language-C-blue.svg" />
+  <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg" />
 </p>
 
-<hr style="border: 1px solid #ccc;"/>
-
-<h2 style="color:#2c3e50;">📘 Overview</h2>
-
-<p style="font-size: 1em; color: #333;">
-  This repository contains C programs for approximating definite integrals using well-known numerical methods. Each algorithm is structured for clarity, accuracy, and educational value.
+<p align="center" style="font-size:1.2em; color:#555;">
+  Efficient and accurate C implementations of widely-used numerical integration techniques, designed for engineers, mathematicians, and students.
 </p>
 
-<h2 style="color:#2c3e50;">🧮 Methods Implemented</h2>
+<hr style="border:1px solid #ccc;"/>
+
+<h2 style="color:#2c3e50;">📘 What is Numerical Integration?</h2>
+
+<p style="font-size:1em; color:#333;">
+  Numerical integration is a fundamental tool in computational mathematics used to estimate the definite integral of functions where analytical integration is difficult or impossible. It's essential in physics simulations, engineering analysis, and real-time systems where accuracy and speed are critical.
+</p>
+
+<h2 style="color:#2c3e50;">🧮 Implemented Methods</h2>
 
 <ul style="font-size: 1em; line-height: 1.6;">
   <li>Trapezoidal Rule</li>
   <li>Simpson's 1/3 Rule</li>
   <li>Simpson's 3/8 Rule</li>
-  <li>Midpoint Rule (if available)</li>
-  <li>Boole's Rule (if added)</li>
+  <li>Gauss-Legendre Quadrature</li>
+  <li>Romberg Integration</li>
 </ul>
 
-<h2 style="color:#2c3e50;">⚙️ How to Use</h2>
+<h2 style="color:#2c3e50;">📊 Method Comparison</h2>
 
-<pre style="background-color: #f4f4f4; padding: 10px; border-radius: 6px; overflow-x: auto;">
+<table align="center" style="border-collapse: collapse; width: 100%;">
+  <tr style="background-color:#f4f4f4;">
+    <th style="padding: 8px; border: 1px solid #ddd;">Method</th>
+    <th style="padding: 8px; border: 1px solid #ddd;">Accuracy</th>
+    <th style="padding: 8px; border: 1px solid #ddd;">Speed</th>
+    <th style="padding: 8px; border: 1px solid #ddd;">Best Use Case</th>
+  </tr>
+  <tr>
+    <td style="padding: 8px; border: 1px solid #ddd;">Trapezoidal Rule</td>
+    <td style="padding: 8px; border: 1px solid #ddd;">Low–Moderate</td>
+    <td style="padding: 8px; border: 1px solid #ddd;">Fast</td>
+    <td style="padding: 8px; border: 1px solid #ddd;">Rough approximations</td>
+  </tr>
+  <tr>
+    <td style="padding: 8px; border: 1px solid #ddd;">Simpson’s 1/3 Rule</td>
+    <td style="padding: 8px; border: 1px solid #ddd;">Moderate–High</td>
+    <td style="padding: 8px; border: 1px solid #ddd;">Fast</td>
+    <td style="padding: 8px; border: 1px solid #ddd;">Smooth functions</td>
+  </tr>
+  <tr>
+    <td style="padding: 8px; border: 1px solid #ddd;">Simpson’s 3/8 Rule</td>
+    <td style="padding: 8px; border: 1px solid #ddd;">Moderate–High</td>
+    <td style="padding: 8px; border: 1px solid #ddd;">Moderate</td>
+    <td style="padding: 8px; border: 1px solid #ddd;">Odd intervals, polynomials</td>
+  </tr>
+  <tr>
+    <td style="padding: 8px; border: 1px solid #ddd;">Gauss-Legendre</td>
+    <td style="padding: 8px; border: 1px solid #ddd;">Very High</td>
+    <td style="padding: 8px; border: 1px solid #ddd;">Fast</td>
+    <td style="padding: 8px; border: 1px solid #ddd;">High-precision needs</td>
+  </tr>
+  <tr>
+    <td style="padding: 8px; border: 1px solid #ddd;">Romberg Integration</td>
+    <td style="padding: 8px; border: 1px solid #ddd;">Very High</td>
+    <td style="padding: 8px; border: 1px solid #ddd;">Slower</td>
+    <td style="padding: 8px; border: 1px solid #ddd;">When extreme accuracy is required</td>
+  </tr>
+</table>
+
+<h2 style="color:#2c3e50;">⚙️ Clone the Repository</h2>
+
+<pre style="background-color:#f8f8f8; padding:10px; border-radius:6px;">
 git clone https://github.com/NaumaanSaifi1/Numerical_Integration.git
 cd Numerical_Integration
 
 # Compile and run any method
-gcc trapezoidal.c -o trapezoidal
-./trapezoidal
+gcc simpson13.c -o simpson13
+./simpson13
 </pre>
 
-<h2 style="color:#2c3e50;">🎯 Applications</h2>
-<ul style="font-size: 1em; line-height: 1.6;">
-  <li>Engineering computations where exact integration is not possible</li>
-  <li>Scientific simulations and modeling</li>
-  <li>Educational demonstrations of numerical techniques</li>
-</ul>
+<h2 style="color:#2c3e50;">📂 Folder Structure</h2>
 
-<h2 style="color:#2c3e50;">🛠 Technologies</h2>
+<pre style="background-color:#f8f8f8; padding:10px; border-radius:6px;">
+Numerical_Integration/
+├── trapezoidal.c
+├── simpson13.c
+├── simpson38.c
+├── gauss_legendre.c
+├── romberg.c
+└── README.md
+</pre>
 
-<table>
-  <tr>
-    <td><strong>Language</strong></td>
-    <td>C</td>
-  </tr>
-  <tr>
-    <td><strong>Compiler</strong></td>
-    <td>GCC / Clang</td>
-  </tr>
-  <tr>
-    <td><strong>Editor</strong></td>
-    <td>VS Code / Code::Blocks</td>
-  </tr>
-</table>
+<h2 style="color:#2c3e50;">📩 Contact</h2>
 
-<h2 style="color:#2c3e50;">🤝 Contributing</h2>
-<p>Want to improve or add a new method? Contributions are welcome!</p>
-<ol>
-  <li>Fork the repository</li>
-  <li>Create a branch: <code>git checkout -b feature-name</code></li>
-  <li>Commit changes: <code>git commit -m "Added new method"</code></li>
-  <li>Push to GitHub: <code>git push origin feature-name</code></li>
-  <li>Submit a Pull Request</li>
-</ol>
-
-<h2 style="color:#2c3e50;">📬 Contact</h2>
-<p>
-  <strong>Naumaan Saifi</strong><br/>
-  🔗 <a href="https://github.com/NaumaanSaifi1" target="_blank">GitHub Profile</a><br/>
-  💬 Discord: <em>your-discord-name</em>
+<p style="font-size: 1em;">
+  📧 <strong>Email:</strong> naumaansaifi7@gmail.com
 </p>
 
 <hr style="border: 1px solid #ccc;"/>
 
 <p align="center" style="color: gray;">
-  🚀 Designed for learners, built for precision.
+  Made by using C, for accurate and efficient numerical analysis.
 </p>
